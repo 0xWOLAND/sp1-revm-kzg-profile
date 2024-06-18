@@ -21,7 +21,7 @@ fn main() {
     stdin.write(&GAS);
 
     let client = ProverClient::new();
-    let mut public_values = client.execute(ELF, stdin).expect("failed to prove");
+    let (mut public_values, _) = client.execute(ELF, stdin).expect("failed to prove");
 
     let gas = public_values.read::<u64>();
     let bytes = public_values.read::<String>();
