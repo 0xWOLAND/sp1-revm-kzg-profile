@@ -1,12 +1,11 @@
 #![no_main]
+
 sp1_zkvm::entrypoint!(main);
 
 use hex;
-use revm::precompile::Error;
-use revm::{
-    precompile::kzg_point_evaluation::{run, VERSIONED_HASH_VERSION_KZG},
-    primitives::{Bytes, Env, PrecompileResult},
-};
+use revm_precompile::kzg_point_evaluation::{run, VERSIONED_HASH_VERSION_KZG};
+use revm_primitives::{Bytes, Env, PrecompileResult};
+
 use sha2::{Digest, Sha256};
 
 fn read_hex() -> Vec<u8> {

@@ -11,10 +11,8 @@ path = "src/bin/prove.rs"
 
 [dependencies]
 sp1-sdk = { git = "https://github.com/succinctlabs/sp1.git", branch = "main" }
-
 sha2 = { version = "0.10", default-features = false }
-revm = {git = "https://github.com/0xWOLAND/revm.git"}
 hex = { version = "0.4", default-features = false }
 
 [build-dependencies]
-sp1-helper = { git = "https://github.com/succinctlabs/sp1.git", branch = "main"  }
+sp1-helper = { git = "https://github.com/succinctlabs/sp1.git", branch = "main" }
