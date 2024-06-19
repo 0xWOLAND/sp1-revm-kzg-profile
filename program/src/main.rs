@@ -32,8 +32,10 @@ pub fn main() {
     let env = Env::default();
 
     let input = [versioned_hash, z, y, commitment, proof].concat();
-    let (gas, bytes) = profile_run(&input.into(), gas, &env).unwrap();
 
-    sp1_zkvm::io::commit(&gas);
-    sp1_zkvm::io::commit(&hex::encode(bytes));
+    for _ in 0..4 {
+        let (gas, bytes) = profile_run(&input.clone().into(), gas, &env).unwrap();
+        sp1_zkvm::io::commit(&gas);
+        sp1_zkvm::io::commit(&hex::encode(bytes));
+    }
 }

@@ -1427,6 +1427,8 @@ dependencies = [
  "bls12_381",
  "glob",
  "hex",
+ "lazy_static",
+ "once_cell",
  "serde",
  "serde_derive",
  "serde_yaml",

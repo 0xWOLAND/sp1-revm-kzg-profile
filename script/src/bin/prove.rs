@@ -25,6 +25,8 @@ fn main() {
     let gas = public_values.read::<u64>();
     let bytes = public_values.read::<String>();
 
-    assert_eq!(gas, GAS);
-    assert_eq!(bytes, EXPECTED_OUTPUT);
+    for _ in 0..4 {
+        assert_eq!(gas, GAS);
+        assert_eq!(bytes, EXPECTED_OUTPUT);
+    }
 }
