@@ -1,6 +1,5 @@
-use hex;
 use sp1_sdk::utils;
-use sp1_sdk::{HashableKey, ProverClient, SP1PlonkBn254Proof, SP1Stdin, SP1VerifyingKey};
+use sp1_sdk::{ProverClient, SP1Stdin};
 pub const ELF: &[u8] = include_bytes!("../../../program/elf/riscv32im-succinct-zkvm-elf");
 
 fn main() {
