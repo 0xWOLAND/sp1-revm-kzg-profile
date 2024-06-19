@@ -11,13 +11,14 @@ fn main() {
     const Z: &str = "73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000000";
     const Y: &str = "1522a4a7f34e1ea350ae07c29c96c7e79655aa926122e95fe69fcbd932ca49e9";
     const PROOF: &str = "a62ad71d14c5719385c0686f1871430475bf3a00f0aa3f7b8dd99a9abc2160744faf0070725e00b60ad9a026a15b1a8c";
-    let EXPECTED_OUTPUT: &str = hex::encode("000000000000000000000000000000000000000000000000000000000000100073eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001").as_str();
+    let binding = hex::encode("000000000000000000000000000000000000000000000000000000000000100073eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001");
+    let EXPECTED_OUTPUT: &str = binding.as_str();
     const GAS: u64 = 50000;
 
-    stdin.write(COMMITMENT);
-    stdin.write(Z);
-    stdin.write(Y);
-    stdin.write(PROOF);
+    stdin.write(&COMMITMENT);
+    stdin.write(&Z);
+    stdin.write(&Y);
+    stdin.write(&PROOF);
     stdin.write(&GAS);
 
     let client = ProverClient::new();
