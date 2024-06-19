@@ -20,8 +20,7 @@ fn profile_run(input: &Bytes, gas: u64, env: &Env) -> PrecompileResult {
 }
 
 pub fn main() {
-    let data = read_hex();
-    let commitment = hex::decode(data).unwrap();
+    let commitment = read_hex();
     let mut versioned_hash = Sha256::digest(&commitment).to_vec();
     versioned_hash[0] = VERSIONED_HASH_VERSION_KZG;
 
