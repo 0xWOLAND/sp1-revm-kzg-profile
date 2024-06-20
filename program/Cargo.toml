@@ -9,11 +9,11 @@ alloy-sol-types = "0.7.2"
 sp1-zkvm = { git = "https://github.com/succinctlabs/sp1.git" }
 sp1-derive = { git = "https://github.com/succinctlabs/sp1.git", branch = "main" }
 
-revm-precompile = { path = "../../revm/crates/precompile", features = [
+revm-precompile = { git = "https://github.com/0xWOLAND/revm", branch = "patch-v5.0.0", features = [
     'std',
     'sp1-kzg',
 ], default-features = false }
-revm-primitives = { path = "../../revm/crates/primitives", features = [
+revm-primitives = { git = "https://github.com/0xWOLAND/revm", branch = "patch-v5.0.0", features = [
     'std',
     'sp1-kzg',
 ], default-features = false }

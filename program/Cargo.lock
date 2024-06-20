@@ -362,6 +362,8 @@ dependencies = [
 [[package]]
 name = "bls12_381"
 version = "0.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d7bc6d6292be3a19e6379786dac800f551e5865a5bb51ebbe3064ab80433f403"
 dependencies = [
  "ff",
  "group",
@@ -1110,6 +1112,7 @@ checksum = "7a66a03ae7c801facd77a29370b4faec201768915ac14a721ba36f20bc9c209b"
 [[package]]
 name = "revm-precompile"
 version = "4.0.0"
+source = "git+https://github.com/0xWOLAND/revm?branch=patch-v5.0.0#554113545d0c3b37d500de07a23dc12e35307f65"
 dependencies = [
  "anyhow",
  "aurora-engine-modexp",
@@ -1127,6 +1130,7 @@ dependencies = [
 [[package]]
 name = "revm-primitives"
 version = "2.0.0"
+source = "git+https://github.com/0xWOLAND/revm?branch=patch-v5.0.0#554113545d0c3b37d500de07a23dc12e35307f65"
 dependencies = [
  "alloy-primitives 0.6.4",
  "auto_impl",
@@ -1413,7 +1417,7 @@ dependencies = [
 [[package]]
 name = "sp1-derive"
 version = "0.1.0"
-source = "git+https://github.com/succinctlabs/sp1.git?branch=main#b35be4200e7369bd987d8ba101f70dd7dec3df1a"
+source = "git+https://github.com/succinctlabs/sp1.git?branch=main#14eb569d41d24721ffbd407d6060e202482d659c"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1423,11 +1427,11 @@ dependencies = [
 [[package]]
 name = "sp1-kzg"
 version = "0.1.0"
+source = "git+https://github.com/0xWOLAND/sp1-kzg#42eb66723ffc3da6df663f18c5006896ee6c4892"
 dependencies = [
  "bls12_381",
  "glob",
  "hex",
- "lazy_static",
  "once_cell",
  "serde",
  "serde_derive",
@@ -1438,7 +1442,7 @@ dependencies = [
 [[package]]
 name = "sp1-precompiles"
 version = "0.1.0"
-source = "git+https://github.com/succinctlabs/sp1.git#b35be4200e7369bd987d8ba101f70dd7dec3df1a"
+source = "git+https://github.com/succinctlabs/sp1.git#14eb569d41d24721ffbd407d6060e202482d659c"
 dependencies = [
  "anyhow",
  "bincode",
@@ -1468,7 +1472,7 @@ dependencies = [
 [[package]]
 name = "sp1-zkvm"
 version = "0.1.0"
-source = "git+https://github.com/succinctlabs/sp1.git#b35be4200e7369bd987d8ba101f70dd7dec3df1a"
+source = "git+https://github.com/succinctlabs/sp1.git#14eb569d41d24721ffbd407d6060e202482d659c"
 dependencies = [
  "bincode",
  "cfg-if",
@@ -1520,9 +1524,9 @@ dependencies = [
 
 [[package]]
 name = "subtle"
-version = "2.5.0"
+version = "2.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "81cdd64d312baedb58e21336b31bc043b77e01cc99033ce76ef539f78e965ebc"
+checksum = "0d0208408ba0c3df17ed26eb06992cb1a1268d41b2c0e12e65203fbe3972cee5"
 
 [[package]]
 name = "syn"
