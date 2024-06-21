@@ -11,11 +11,11 @@ sp1-derive = { git = "https://github.com/succinctlabs/sp1.git", branch = "main" 
 
 revm-precompile = { git = "https://github.com/0xWOLAND/revm", branch = "patch-v5.0.0", features = [
     'std',
-    'sp1-kzg',
+    'kzg-rs',
 ], default-features = false }
 revm-primitives = { git = "https://github.com/0xWOLAND/revm", branch = "patch-v5.0.0", features = [
     'std',
-    'sp1-kzg',
+    'kzg-rs',
 ], default-features = false }
 hex = { version = "0.4", default-features = false }
 sha2 = { version = "0.10", default-features = false }
